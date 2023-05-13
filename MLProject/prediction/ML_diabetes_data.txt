@@ -2,11 +2,7 @@ A - Well controlled Diabetes
 B - Take precautions to control diabetes
 C - Need to take precautions and follow rules to control diabetes 
 
-Z - Non-Diabetic Patient 
-
-For virtualenv creation on windows: . scripts\activate
-
-28th line in csv file
+Z - Non-Diabetic Patient
 
 A-Accept that you have Diabetes -HbA1C levels
 B-Blood pressure -Maintain normal blood pressure -less than 140/90.Normal blood Sugar level
