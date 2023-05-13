@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <title>Diabetes Monitor System</title>
+   <style>
+    body{
+    background-color:white;
+    text-align: center;
+    background-image: url('https://www.scnsoft.com/_default_upload_bucket/wireless-patient-monitoring_01-cover.png');
+}
+
+.container{
+  display: flex;
+  margin-top: 8%;
+  margin-left: 30%;
+}
+.card{
+  background-color:#81cef7;
+  padding: 5px;
+  align-items: center;
+  display: flex;
+  width: 50%;
+}
+.card .card-title{
+  color: #575A89;
+  font-weight: bolder;
+  margin-bottom: 15%;
+}
+
+.card .mb-3{
+  color: #575A89;
+  font-weight: 500;
+}
+.btn{
+  background-color:  #28a745;
+  color:white;
+  border: 1px solid #007bff;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.btn:hover{
+  background-color:#DED8F8;
+  color: #575A89;
+  border: 1px solid #575A89;
+}
+
+.reset_btn{
+  margin-top: 2%;
+}
+
+   </style>
+
+  </head>
+  <body>
+    {% block content %}
+    <div class="container mb-3 py-4">
+        <div class="card" >
+           
+
+            <div class="card-body">
+                <h5 class="card-title">Diabetes Monitoring System</h5>
+                <form action="/predict/"  method="POST">
+                    {% csrf_token %}
+    
+                    <div class="mb-3">
+                        <label class="form-label">Fasting Sugar</label>
+                        <input type="number" class="form-control" name="fastinSugar" placeholder="Fasting Sugar">
+                    </div>
+    
+                    <div class="mb-3">
+                        <label class="form-label">Postprandial</label>
+                        <input type="number" class="form-control"  name="postprandial" placeholder="Postprandial">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">HbA1C</label>
+                        <input type="text" class="form-control" name="hba1c" placeholder="HbA1C">
+                    </div>
+    
+                    <button type="Submit" class="btn btn-primary">Monitor</button>
+                    
+                    </form>
+                    
+                    {% endblock %}
+            </div>
+            {% if error %} 
+            <h4 style="color: #575A89">Prediction: {{message}}</h4>
+            {% endif %}
+    
+        </div>
+    </div>
+  </body>
+</html>

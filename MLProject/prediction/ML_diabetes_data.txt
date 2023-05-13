@@ -1,0 +1,18 @@
+A - Well controlled Diabetes
+B - Take precautions to control diabetes
+C - Need to take precautions and follow rules to control diabetes 
+
+Z - Non-Diabetic Patient 
+
+For virtualenv creation on windows: . scripts\activate
+
+28th line in csv file
+
+A-Accept that you have Diabetes -HbA1C levels
+B-Blood pressure -Maintain normal blood pressure -less than 140/90.Normal blood Sugar level
+C-Cholesterol -Normal levels
+D-Diet-Diabetic Diet low fat, without sugar diet, High protein diet. Avoid sugar, take rice in small quantity
+Drugs-Take regular antidiabetic drugs as prescribed by Doctor
+E- Exercise 20 minutes per day for 5 times in a week
+Eyecare -checkup if blurring of vision or yearly to avoid diabetic retinopathy
+F-Foot examination daily for any injury to foot or decresed sensation of foot to avoid diabetic foot. Do not go barefoot to avoid injury to foot- Footcare important
